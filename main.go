@@ -12,6 +12,7 @@ type PasswordManager struct{
 	Passwords map[string]PasswordEntry
 }
 
+
 func main() {
 
 fmt.Println("======================")
@@ -25,6 +26,26 @@ fmt.Println("4 удалить пароль")
 fmt.Println("5 сгенерировать пароль")
 fmt.Println("6 выход")
 
+fmt.Println("======================")
+fmt.Println("что делать")
+var uu int
+fmt.Scan(&uu)
+
+if uu==1{
+	addPasword()
 }
+
+}
+
+func(p *PasswordManager) addPasword(ff PasswordEntry){
+	var entry PasswordEntry
+	
+	fmt.Println("добавить пароль")
+	var t string
+	fmt.Scan(t)
+	entry.Password=t
+	
+}
+
 
 
