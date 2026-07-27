@@ -15,6 +15,8 @@ type PasswordManager struct{
 
 func main() {
 
+
+
 fmt.Println("======================")
 fmt.Println("Password Manager")
 fmt.Println("======================")
@@ -39,12 +41,21 @@ if uu==1{
 
 func(p *PasswordManager) addPasword(ff PasswordEntry){
 	var entry PasswordEntry
+
+	fmt.Println("добавить сайт")
+	var tt string
+	fmt.Scan(tt)
+	entry.Site=tt
+	
+	fmt.Println("добавить логин")
+	var ttt string
+	fmt.Scan(ttt)
+	entry.Login=ttt
 	
 	fmt.Println("добавить пароль")
 	var t string
 	fmt.Scan(t)
 	entry.Password=t
-	
 }
 
 
