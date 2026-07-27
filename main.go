@@ -43,7 +43,7 @@ func main() {
 		if uu == 3 {
 			pas.allSpisok()
 		}
-		if uu==4{
+		if uu==6{
 			break
 		}
 	}
