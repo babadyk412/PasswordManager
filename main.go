@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"strconv"
 )
 
 type PasswordEntry struct {
@@ -48,7 +50,10 @@ func main() {
 		if uu == 4 {
 			pas.deletePasword()
 		}
-		if uu==6{
+		if uu == 5 {
+			pas.randome()
+		}
+		if uu == 6 {
 			break
 		}
 	}
@@ -95,5 +100,12 @@ func (p *PasswordManager) deletePasword() {
 	var a string
 	fmt.Scan(&a)
 	delete(p.Passwords, a)
+}
+
+func (p *PasswordManager) randome() {
+	n := rand.Intn(99999999)
+	nn := rand.Intn(657578)
+	y := strconv.Itoa(n) + strconv.Itoa(nn)
+	fmt.Println("создан пароль:", y)
 
 }
