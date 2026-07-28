@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type PasswordEntry struct {
 	Site     string
@@ -43,7 +45,10 @@ func main() {
 		if uu == 3 {
 			pas.allSpisok()
 		}
-		if uu==4{
+		if uu == 4 {
+			pas.deletePasword()
+		}
+		if uu==6{
 			break
 		}
 	}
@@ -78,6 +83,17 @@ func (p *PasswordManager) findPasword() {
 
 func (p *PasswordManager) allSpisok() {
 	for _, i := range p.Passwords {
-		fmt.Println(i.Site)
+		fmt.Println("сайт", i.Site)
+		fmt.Println("логин", i.Login)
+		fmt.Println("пароль", i.Password)
+		fmt.Println("======================")
 	}
+}
+
+func (p *PasswordManager) deletePasword() {
+	fmt.Println("какой сайт  удалить")
+	var a string
+	fmt.Scan(&a)
+	delete(p.Passwords, a)
+
 }
